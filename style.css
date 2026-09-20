@@ -19,3 +19,85 @@
 @import './src/ui/styles/voice-cost.css';
 @import './src/ui/styles/first-run.css';
 @import './src/ui/styles/provider-settings.css';
+
+
+#agent-console {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10000;
+  width: min(430px, calc(100vw - 36px));
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(5, 8, 12, 0.94);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 14px 50px rgba(0,0,0,.45);
+  color: #e8edf2;
+  font-family: "JetBrains Mono", monospace;
+  backdrop-filter: blur(12px);
+}
+#agent-console[hidden] { display: none; }
+.agent-console-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+.agent-console-head button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+.agent-log {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.agent-row {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 8px 9px;
+  border-radius: 4px;
+}
+.agent-row.user { background: rgba(255,255,255,.08); }
+.agent-row.assistant { background: rgba(80,160,255,.10); }
+.agent-row.error { background: rgba(255,80,80,.12); color: #ffb0b0; }
+.agent-note { opacity: .6; font-size: 10px; }
+.agent-form {
+  display: flex;
+  gap: 7px;
+  padding: 9px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.agent-form input {
+  min-width: 0;
+  flex: 1;
+  padding: 9px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(0,0,0,.3);
+  color: inherit;
+  font: inherit;
+  font-size: 11px;
+  outline: none;
+}
+.agent-form button {
+  padding: 0 13px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.08);
+  color: inherit;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+.agent-form button:disabled { opacity: .45; cursor: wait; }
