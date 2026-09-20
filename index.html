@@ -32,6 +32,17 @@
 
   <!-- gev:template provider-settings -->
 
+  <section id="agent-console" aria-label="AI Agent Console">
+    <div class="agent-console-head"><span>9ROUTER / AGENT REACH</span><button id="agent-close" type="button" aria-label="Close">×</button></div>
+    <div id="agent-log" class="agent-log"><div class="agent-note">Ready. Text requests use 9Router; public web, GitHub, and YouTube lookups can be delegated to Agent Reach.</div></div>
+    <form id="agent-form" class="agent-form">
+      <input id="agent-input" autocomplete="off" placeholder="Ask the intelligence console…" />
+      <button type="submit">RUN</button>
+    </form>
+  </section>
+
+  <script type="module" src="/src/agentConsole.js"></script>
+
   <!-- gev:template hud-loading -->
 
   <script type="module" src="/src/main.js"></script>
